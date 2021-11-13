@@ -1,0 +1,11 @@
+in:
+  type: bigquery
+  project: 'global-standard-140515'
+  keyfile: '/app/service-accounts/bigquery-keyfile.json'
+  sql: 'SELECT element, value FROM `bigquery-public-data.ghcn_d.ghcnd_2021` WHERE id = "JA000047662" AND date = "2021-11-01"'
+  columns:
+    - {name: element, type: string}
+    - {name: value, type: double}
+  max: 2000
+out:
+  type: stdout
