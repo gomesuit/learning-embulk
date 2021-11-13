@@ -1,0 +1,20 @@
+---
+in:
+  type: bigquery
+  project: 'global-standard-140515'
+  keyfile: '/app/service-accounts/bigquery-keyfile.json'
+  sql_erb: 'SELECT date, element, value FROM `bigquery-public-data.ghcn_d.ghcnd_<%= params["date"].strftime("%Y")  %>` WHERE id = "JA000047662"'
+  erb_params:
+    date: "require 'date'; (Date.today - 30)"
+  columns:
+    - {name: date, type: string}
+    - {name: element, type: string}
+    - {name: value, type: double}
+  max: 2000
+out:
+  type: s3_parquet
+  bucket: test-gomesuit-embulk
+  region: ap-northeast-1
+  path_prefix: bigquery/out.
+  file_ext: snappy.parquet
+  compression_codec: snappy
