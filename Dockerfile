@@ -29,6 +29,9 @@ RUN embulk gem install --verbose embulk-output-s3 -v 1.7.0
 # https://github.com/takei-yuya/embulk-formatter-jsonl
 RUN embulk gem install --verbose embulk-formatter-jsonl -v 0.1.4
 
+# https://github.com/civitaspo/embulk-output-s3_parquet
+RUN embulk gem install --verbose embulk-output-s3_parquet -v 0.5.2
+
 WORKDIR /app
 
 CMD [ "bash" ]
