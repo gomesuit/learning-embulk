@@ -13,8 +13,8 @@ RUN mkdir -p ${PATH_TO_EMBULK} \
     && chmod +x ${PATH_TO_EMBULK}/embulk
 ENV PATH=${PATH}:/opt/embulk
 
-# sample to install plugin
-# RUN embulk gem install embulk-output-td
+# https://github.com/medjed/embulk-input-bigquery
+RUN embulk gem install embulk-input-bigquery
 
 WORKDIR /app
 
