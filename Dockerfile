@@ -23,6 +23,9 @@ RUN embulk gem install --verbose representable -v 3.0.4
 RUN embulk gem install --verbose google-api-client -v 0.32.1
 RUN embulk gem install --verbose embulk-input-bigquery -v 0.0.9
 
+# https://github.com/embulk/embulk-output-s3
+RUN embulk gem install --verbose embulk-output-s3 -v 1.7.0
+
 WORKDIR /app
 
 CMD [ "bash" ]
