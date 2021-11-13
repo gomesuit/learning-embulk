@@ -14,7 +14,9 @@ RUN mkdir -p ${PATH_TO_EMBULK} \
 ENV PATH=${PATH}:/opt/embulk
 
 # https://github.com/medjed/embulk-input-bigquery
-RUN embulk gem install embulk-input-bigquery
+# ENV DEBUG_RESOLVER=true
+# RUN embulk gem install representable -v 3.0.4
+# RUN embulk gem install --verbose embulk-input-bigquery
 
 WORKDIR /app
 
