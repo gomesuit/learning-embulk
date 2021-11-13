@@ -9,6 +9,7 @@
 
 # s3
 - https://github.com/embulk/embulk-output-s3
+- https://www.capybara-engineer.com/entry/2021/04/12/142154
 
 Tryed this commands.
 
