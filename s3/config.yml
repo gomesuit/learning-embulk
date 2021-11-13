@@ -25,8 +25,8 @@ in:
 out:
   type: s3
   path_prefix: logs/out
-  file_ext: .csv
+  file_ext: .json
   bucket: test-gomesuit-embulk
   endpoint: s3-ap-northeast-1.amazonaws.com
   formatter:
-    type: csv
+    type: jsonl
