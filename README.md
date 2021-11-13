@@ -1,5 +1,6 @@
 - https://www.embulk.org/
 - https://www.datacurrent.co.jp/examples/embulk-on-docker20210519/
+- https://masaru-tech.hateblo.jp/entry/2020/08/28/145239
 
 Tryed this commands.
 
