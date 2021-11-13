@@ -2,7 +2,7 @@ in:
   type: file
   path_prefix: /app/./s3/csv/sample_
   decoders:
-  - {type: gzip}
+    - {type: gzip}
   parser:
     charset: UTF-8
     newline: LF
@@ -16,9 +16,9 @@ in:
     allow_extra_columns: false
     allow_optional_columns: false
     columns:
-    - {name: id, type: long}
-    - {name: account, type: long}
-    - {name: time, type: timestamp, format: '%Y-%m-%d %H:%M:%S'}
-    - {name: purchase, type: timestamp, format: '%Y%m%d'}
-    - {name: comment, type: string}
+      - {name: id, type: long}
+      - {name: account, type: long}
+      - {name: time, type: timestamp, format: '%Y-%m-%d %H:%M:%S'}
+      - {name: purchase, type: timestamp, format: '%Y%m%d'}
+      - {name: comment, type: string}
 out: {type: stdout}
