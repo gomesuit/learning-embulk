@@ -13,9 +13,9 @@ RUN mkdir -p ${PATH_TO_EMBULK} \
     && chmod +x ${PATH_TO_EMBULK}/embulk
 ENV PATH=${PATH}:/opt/embulk
 
-RUN embulk gem install embulk-output-td
+# sample to install plugin
+# RUN embulk gem install embulk-output-td
 
 WORKDIR /app
-# COPY ./load.yml.liquid ./
 
 CMD [ "bash" ]
