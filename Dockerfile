@@ -15,8 +15,13 @@ ENV PATH=${PATH}:/opt/embulk
 
 # https://github.com/medjed/embulk-input-bigquery
 # ENV DEBUG_RESOLVER=true
-# RUN embulk gem install representable -v 3.0.4
-# RUN embulk gem install --verbose embulk-input-bigquery
+RUN embulk gem install --verbose google-cloud-env -v 1.2.1
+RUN embulk gem install --verbose google-cloud-core -v 1.3.2
+RUN embulk gem install --verbose googleauth -v 0.9.0
+RUN embulk gem install --verbose signet -v 0.11.0
+RUN embulk gem install --verbose representable -v 3.0.4
+RUN embulk gem install --verbose google-api-client -v 0.32.1
+RUN embulk gem install --verbose embulk-input-bigquery -v 0.0.9
 
 WORKDIR /app
 
